@@ -1,0 +1,93 @@
+1. pip install virtualenv
+2. make a folder (eg - djangoproject)
+3.cd djangoproject
+4.activate
+5. pip install django
+
+
+
+making project
+1. django-admin startproject machine  (machine is the project name)
+
+asdi is advanced server and wsgi is internal server
+
+orm - object relational mapping
+
+
+making module for development
+1. cd machine
+2. python manage.py startapp myapp (myapp is the name of the app)
+
+
+now to associate the app
+1. go to setting.py and add your appname in installed apps
+
+-----------------------------------------------------------------
+python manage.py migrate (compiles and installs the database)
+
+python manage.py runserver(to run the server)
+
+in broswer run localhost:8000
+-----------------------------------------------------------------
+
+mvc = model view controlleer (database , view , controller)
+-----------------------------------------------------------------
+
+cretae html file(index.html)
+save it in myapp -> templates (folder to be created)
+
+open views.py
+# Create your views here.
+
+def show(request):
+    return render(request,'index.html')
+
+open urls.py
+
+add - 
+from myapp.views import *
+in urlpatterns add path -     path('' , show),
+
+-----------------------------------------------------------------
+
+
+D:\dsjup\djangoknn
+
+
+>django-admin startproject knndemo
+cd knndemo
+python manage.py startapp knn
+knndemo -> settings.py add knnapp
+create forms.py and save it in knn(app) folder
+open views.py in knn and edit it
+#cross site request forgeery(csrf)
+now in knn->  templates save index.html
+create on more html page(show.html)
+open urls.py import views and add path
+
+put iris.csv in both knn and knndemo folder
+python manage.py migrate
+python manage.py runserver
+
+
+---------------------------------------------------
+Face DEtection
+
+same 
+modified model.py
+python manage.py makemigrations#create  tables as per the class
+then migrate
+db browser(sqlite3)
+make forms.py in app folder
+
+
+#identity matrix , eigen value , eigen vector
+
+
+
+
+
+
+
+
+
